@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<base href="/">
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Chat Room | Spring Boot + WebSocket + html + js + css </title>
+    <link rel="stylesheet" href="/css/lobby.css" />
+</head>
+<body background="maxresdefault.jpg"
+      style="background-position: center; background-repeat: no-repeat;
+background-size: cover;">
+<noscript>
+</noscript>
+<div id="username-page">
+    <div class="username-page-container">
+        <h1 class="title">Enter your name:</h1>
+        <form id="usernameForm" name="usernameForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Nickname"
+                       autocomplete="off" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="accent username-submit">Join chat</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="chat-page" class="hidden">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chat Room</h2>
+        </div>
+        <div class="connecting">Connecting to chat...</div>
+        <ul id="messageArea">
+        </ul>
+        <form id="messageForm" name="messageForm" nameForm="messageForm">
+            <div class="form-group">
+                <div class="input-group clearfix">
+                    <input type="text" id="message" placeholder="Type a message..."
+                           autocomplete="off" class="form-control" />
+                    <button type="submit" class="primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js">
+</script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="/js/lobby.js"></script>
+</body>
+</html>
